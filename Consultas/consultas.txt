@@ -1,0 +1,2 @@
+SELECT * FROM productos WHERE stock = (SELECT MAX(stock) FROM productos);
+SELECT id_producto, COUNT( id_producto ) AS total FROM  ventas GROUP BY id_producto ORDER BY total DESC;
